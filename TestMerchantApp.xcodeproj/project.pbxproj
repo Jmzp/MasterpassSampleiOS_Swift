@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4733984120616EE800EC0177 /* MCCMerchant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4733983F20616EDD00EC0177 /* MCCMerchant.framework */; };
+		4733984220616EE800EC0177 /* MCCMerchant.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4733983F20616EDD00EC0177 /* MCCMerchant.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		47503822203CB07A00C8093E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47503821203CB07A00C8093E /* AppDelegate.swift */; };
 		47503824203CB07A00C8093E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47503823203CB07A00C8093E /* ViewController.swift */; };
 		47503827203CB07A00C8093E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47503825203CB07A00C8093E /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		4750382C203CB07A00C8093E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4750382A203CB07A00C8093E /* LaunchScreen.storyboard */; };
 		47503837203CB07A00C8093E /* TestMerchantAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47503836203CB07A00C8093E /* TestMerchantAppTests.swift */; };
 		47503842203CB07A00C8093E /* TestMerchantAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47503841203CB07A00C8093E /* TestMerchantAppUITests.swift */; };
+		47C2AFDB2062B3E300BD36C5 /* MerchantCheckoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C2AFDA2062B3E300BD36C5 /* MerchantCheckoutManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +36,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4733984320616EE800EC0177 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4733984220616EE800EC0177 /* MCCMerchant.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4733983D20616AF600EC0177 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4733983F20616EDD00EC0177 /* MCCMerchant.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MCCMerchant.framework; sourceTree = "<group>"; };
+		47339844206172EE00EC0177 /* TestMerchantApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestMerchantApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		4750381E203CB07A00C8093E /* TestMerchantApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMerchantApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47503821203CB07A00C8093E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47503823203CB07A00C8093E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +67,7 @@
 		4750383D203CB07A00C8093E /* TestMerchantAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMerchantAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47503841203CB07A00C8093E /* TestMerchantAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMerchantAppUITests.swift; sourceTree = "<group>"; };
 		47503843203CB07A00C8093E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47C2AFDA2062B3E300BD36C5 /* MerchantCheckoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantCheckoutManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4733984120616EE800EC0177 /* MCCMerchant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +96,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		473398372061631200EC0177 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4733983F20616EDD00EC0177 /* MCCMerchant.framework */,
+				4733983D20616AF600EC0177 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		47503815203CB07A00C8093E = {
 			isa = PBXGroup;
 			children = (
+				47339844206172EE00EC0177 /* TestMerchantApp-Bridging-Header.h */,
 				47503820203CB07A00C8093E /* TestMerchantApp */,
 				47503835203CB07A00C8093E /* TestMerchantAppTests */,
 				47503840203CB07A00C8093E /* TestMerchantAppUITests */,
 				4750381F203CB07A00C8093E /* Products */,
+				473398372061631200EC0177 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +136,7 @@
 				47503828203CB07A00C8093E /* Assets.xcassets */,
 				4750382A203CB07A00C8093E /* LaunchScreen.storyboard */,
 				4750382D203CB07A00C8093E /* Info.plist */,
+				47C2AFDA2062B3E300BD36C5 /* MerchantCheckoutManager.swift */,
 			);
 			path = TestMerchantApp;
 			sourceTree = "<group>";
@@ -135,6 +169,7 @@
 				4750381A203CB07A00C8093E /* Sources */,
 				4750381B203CB07A00C8093E /* Frameworks */,
 				4750381C203CB07A00C8093E /* Resources */,
+				4733984320616EE800EC0177 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47C2AFDB2062B3E300BD36C5 /* MerchantCheckoutManager.swift in Sources */,
 				47503824203CB07A00C8093E /* ViewController.swift in Sources */,
 				47503822203CB07A00C8093E /* AppDelegate.swift in Sources */,
 			);
@@ -427,13 +463,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 659TMT4M6Q;
+				DEVELOPMENT_TEAM = 5T3727QAWW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MCCMerchant.framework/Headers";
 				INFOPLIST_FILE = TestMerchantApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.TestMerchantApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/TestMerchantApp-Bridging-Header.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -442,13 +485,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 659TMT4M6Q;
+				DEVELOPMENT_TEAM = 5T3727QAWW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MCCMerchant.framework/Headers";
 				INFOPLIST_FILE = TestMerchantApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.TestMerchantApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/TestMerchantApp-Bridging-Header.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
