@@ -11,10 +11,14 @@ import Foundation
 
 class MerchantCheckoutManager:NSObject, MCCMerchantDelegate {
     let TAG = "MerchantCheckoutManager"
-    
-    //Checkout Logic ...
+
     
     //MerchantCheckoutManager.swift
+    
+    func getMasterPassButton() -> MCCMasterpassButton? {
+        let masterpassButton = MCCMerchant.getMasterPassButton(self)
+        return masterpassButton
+    }
     
     // MARK: Build up your checkout request here
     func didGetCheckoutRequest(_ completionBlock: ((MCCCheckoutRequest) -> Bool)?) {
@@ -22,9 +26,7 @@ class MerchantCheckoutManager:NSObject, MCCMerchantDelegate {
         let transactionRequest = MCCCheckoutRequest()
         
         //check merchant on-boarding process for checkoutId & cartID
-        //transactionRequest.checkoutId = "c71d7dddda6a4db3af6121346de08ad9"
         transactionRequest.checkoutId = "2a68b52293f84f14bb9750e0b3515c13"
-        //transactionRequest.checkoutId = "e2e39e91903a4e1d9743491448c79c11"
         transactionRequest.cartId = "b9410f9-e5a7-4f14-9c99-ea557d6fe2e8"
         
         //amount and currency
@@ -69,7 +71,7 @@ class MerchantCheckoutManager:NSObject, MCCMerchantDelegate {
         let webCheckoutType : MCCResponseType = checkoutResponse.responseType
         if (webCheckoutType == .webCheckout){
             //do something
-            print(self.TAG + " - " + checkoutResponse.transactionId)
+            print(self.TAG + " TransactionId - " + checkoutResponse.transactionId)
         }
     }
 }

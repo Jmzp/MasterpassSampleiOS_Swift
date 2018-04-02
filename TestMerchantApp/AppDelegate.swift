@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }*/
  
      func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return MCCMerchant.handleMasterpassResponse(url.absoluteString, delegate: ViewController())
+        return MCCMerchant.handleMasterpassResponse(url.absoluteString, delegate: MerchantCheckoutManager())
      }
     
     
